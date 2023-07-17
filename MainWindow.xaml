@@ -1,0 +1,22 @@
+﻿<Window x:Class="MyFitness.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyFitness"
+        mc:Ignorable="d"
+        Title="MyFitness" Height="450" Width="800" Icon="app_icon128x128.ico">
+    <Grid>
+        <ListView x:Name="dishView" Background="White" Margin="10">
+            <ListView.View >
+                <GridView>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Name}">Название блюда</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Type}"></GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Picture}"></GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Ingredients}">Ингредиенты</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Calories}">Кол-во каллорий</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
